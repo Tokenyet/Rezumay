@@ -10,7 +10,7 @@ spec:
   containers:
     - image:  rezumay/frontend:latest
       name:  frontend-pod
-    ports:
-    - containerPort: 80
+      ports:
+      - containerPort: 80
   imagePullSecrets:
     - name: rezumay-gitlab
