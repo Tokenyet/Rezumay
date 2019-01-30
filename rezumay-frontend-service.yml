@@ -1,9 +1,9 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: rezumay-backend-service
+  name: rezumay-frontend-service
   labels:
-    name: rezumay-backend-service
+    name: rezumay-frontend-service
     app: rezumay-app
 spec:
   selector:
