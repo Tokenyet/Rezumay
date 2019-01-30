@@ -8,7 +8,7 @@ metadata:
 
 spec:
   containers:
-    - image:  rezumay/frontend:latest
+    - image:  tokenyete/rezumay/frontend:latest
       name:  frontend-pod
       ports:
       - containerPort: 80
