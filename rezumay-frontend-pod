@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name:  rezumay-frontend-pod
+  labels:
+    name: rezumay-frontend-pod
+    app: rezumay-pod
+
+spec:
+  containers:
+    - image:  rezumay/frontend:latest
+    name:  rezumay-pod
+    ports:
+    - containerPort: 80
+  imagePullSecrets:
+    - name: rezumay-gitlab
