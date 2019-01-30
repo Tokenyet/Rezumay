@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: rezumay-backend-service
+  labels:
+    name: rezumay-backend-service
+    app: rezumay-app
+spec:
+  selector:
+    name: rezumay-backend-pod
+    app: rezumay-app
+  type:  ClusterIP
+  ports:
+  - port:  7070 #service port
+    targetPort:  80 #pod port

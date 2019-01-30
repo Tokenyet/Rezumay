@@ -9,7 +9,11 @@ spec:
   rules:
   - http:
       paths:
-      - path: /hello
+      - path: /api/.*
         backend:
-          serviceName: hello-app
+          serviceName: rezumay-backend-service
+          servicePort: 7070
+      - path: /
+        backend:
+          serviceName: rezumay-frontend-service
           servicePort: 8080
