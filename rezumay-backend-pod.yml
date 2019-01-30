@@ -8,7 +8,7 @@ metadata:
 
 spec:
   containers:
-    - image:  rezumay/backend:latest
+    - image:  registry.gitlab.com/tokenyete/rezumay/backend:latest
       name:  backend-pod
       ports:
       - containerPort: 80
