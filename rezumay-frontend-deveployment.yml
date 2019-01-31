@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rezumay-frontend-deployment
+  labels:
+    app: rezumay-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: rezumay-frontend-pod
+      app: rezumay-app
+  template:
+    metadata:
+      name:  rezumay-frontend-pod
+      labels:
+        name: rezumay-frontend-pod
+        app: rezumay-app
+    spec:
+      containers:
+        - image:  registry.gitlab.com/tokenyete/rezumay/frontend:latest
+          name:  frontend-pod
+          ports:
+          - containerPort: 80
+      imagePullSecrets:
+        - name: rezumay-gitlab
