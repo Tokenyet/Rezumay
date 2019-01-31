@@ -5,7 +5,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    kubernetes.io/ingress.global-static-ip-name: "rezumay"
+    #kubernetes.io/ingress.global-static-ip-name: "rezumay"
 spec:
   rules:
   - http:
@@ -18,3 +18,4 @@ spec:
         backend:
           serviceName: rezumay-frontend-service
           servicePort: 8080
+#https://cloud.google.com/community/tutorials/nginx-ingress-gke

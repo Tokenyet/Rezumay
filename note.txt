@@ -1,0 +1,14 @@
+For New Kubernetes.
+0. https://cloud.google.com/kubernetes-engine/docs/how-to/small-cluster-tuning
+1. Install Nginx Ingress controller (https://cloud.google.com/community/tutorials/nginx-ingress-gke)
+2. Config gitlab key (https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/)
+
+
+
+# gcloud container clusters update [CLUSTER_NAME] --logging-service none
+# gcloud beta container clusters update [CLUSTER_NAME] --monitoring-service none
+# gcloud container clusters update [CLUSTER_NAME] --update-addons=HorizontalPodAutoscaling=DISABLED
+# kubectl scale --replicas=0 deployment/metrics-server-v0.2.1 --namespace=kube-system
+# gcloud container clusters update [CLUSTER_NAME] --update-addons=KubernetesDashboard=DISABLED
+# kubectl scale --replicas=0 deployment/kube-dns-autoscaler --namespace=kube-system
+# kubectl scale --replicas=0 deployment/kube-dns --namespace=kube-system
