@@ -6,6 +6,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    #certmanager.k8s.io/issuer: "letsencrypt-staging" # certmanager for init testing
     certmanager.k8s.io/issuer: "letsencrypt-prod" # certmanager
     certmanager.k8s.io/acme-challenge-type: http01 # certmanager
     #kubernetes.io/ingress.global-static-ip-name: "rezumay"
