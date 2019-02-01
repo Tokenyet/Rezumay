@@ -18,7 +18,7 @@ spec:
         app: rezumay-app
     spec:
       containers:
-        - image:  registry.gitlab.com/tokenyete/rezumay/backend:latest
+        - image:  registry.gitlab.com/tokenyete/rezumay/backend:20190202
           name:  backend-pod
           ports:
           - containerPort: 80
