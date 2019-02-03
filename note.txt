@@ -12,3 +12,16 @@ For New Kubernetes.
 # gcloud container clusters update [CLUSTER_NAME] --update-addons=KubernetesDashboard=DISABLED
 # kubectl scale --replicas=0 deployment/kube-dns-autoscaler --namespace=kube-system
 # kubectl scale --replicas=0 deployment/kube-dns --namespace=kube-system
+
+adv1.
+https://cert-manager.readthedocs.io/en/latest/tutorials/acme/quick-start/index.html
+
+adv2.
+git clone https://github.com/danisla/gcloudfunc.git
+echo "source ${PWD}/gcloudfunc/gcloudfunc.bash" >> ${HOME}/.bash_profile
+source ${HOME}/.bash_profile
+
+gcloud-ssh
+https://cloud.google.com/solutions/using-a-nat-gateway-with-kubernetes-engine
+https://github.com/GoogleCloudPlatform/terraform-google-nat-gateway/tree/master/examples/gke-nat-gateway
+https://github.com/GoogleCloudPlatform/terraform-google-nat-gateway/tree/master/examples/gke-ha-nat-gateway
